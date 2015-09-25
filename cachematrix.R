@@ -59,8 +59,8 @@ cacheSolve <- function(x, ...) {
         return(inv)
     }
     
-    # This is a new matrix so solve it
-    inv <- solve(y)
+    # This is a new matrix so solve it and pass any other parameters via the ...
+    inv <- solve(y, ...)
     
     # Save it original matrix
     x$saveMatrix(y)
